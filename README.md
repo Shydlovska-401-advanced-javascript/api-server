@@ -37,6 +37,12 @@ PUT: Update a single full record in a data source
 PATCH: Update part of a single record in a data source
 DELETE: Delete a record in a data source
 
+# v 1.3.0
+
+Modyfied index.js and server.js
+conected to Mongo DB
+Added tests to new files 
+
 
 
 
