@@ -6,6 +6,27 @@ const mockRequest = supertest(server);
 
 describe('middleware', () => {
 
+  it('should respond with a 500 on an invalid input for categories', () => {
+
+    return mockRequest
+      .post('/api/v1/category')
+      .send({name:'kat'})
+      .then(results => {
+        expect(results).toBe(500);
+      }).catch(console.error);
+
+  });
+
+  it('should respond with a 500 on an invalid input for products', () => {
+
+    return mockRequest
+      .post('/api/v1/products')
+      .send({name:'kat', category:'my name', description:'nothing to say'})
+      .then(results => {
+        expect(results).toBe(500);
+      }).catch(console.error);
+
+  });
 
   it('should respond with a 404 on an invalid route', () => {
 
